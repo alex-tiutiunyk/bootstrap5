@@ -1,12 +1,3 @@
-// Custom.scss
-// Option A: Include all of Bootstrap
-
-// Include any default variable overrides here (though functions won't be available)
-
-// @import '../node_modules/bootstrap/scss/bootstrap';
-
-// Then add additional custom code here
-
 :root {
   --bs-body-color: #333;
   --bs-body-color-rgb: 51, 51, 51;
@@ -67,15 +58,15 @@ a:hover {
 }
 
 .page-title {
+  margin-bottom: clamp(0.875rem, -0.3555rem + 4.1016vw, 2.1875rem);
   font-size: clamp(2.25rem, 0.8438rem + 4.6875vw, 3.75rem);
   font-weight: normal;
-  margin-bottom: clamp(0.875rem, -0.3555rem + 4.1016vw, 2.1875rem);
 }
 
 .subtitle {
+  margin-bottom: clamp(1rem, 0.5898rem + 1.3672vw, 1.4375rem);
   font-size: clamp(1.5rem, 1.1484rem + 1.1719vw, 1.875rem);
   font-weight: normal;
-  margin-bottom: clamp(1rem, 0.5898rem + 1.3672vw, 1.4375rem);
 }
 
 .product {
@@ -84,9 +75,9 @@ a:hover {
   font-size: 1.125rem;
 
   @media (min-width: 576px) {
-    font-size: 1.25rem;
     padding-top: 37px;
     padding-bottom: 42px;
+    font-size: 1.25rem;
   }
 
   &__list {
@@ -96,8 +87,8 @@ a:hover {
   }
 
   &__list-item {
-    margin-bottom: 6px;
     position: relative;
+    margin-bottom: 6px;
     padding-left: 26px;
 
     @media (min-width: 576px) {
@@ -177,10 +168,10 @@ a:hover {
 
     @media (min-width: 768px) {
       order: 2;
-      text-align: right;
-      width: 37%;
       flex-shrink: 0;
+      width: 37%;
       padding-top: 7px;
+      text-align: right;
     }
   }
 
@@ -260,9 +251,9 @@ a:hover {
 }
 
 .box-title {
+  margin-bottom: 9px;
   font-size: clamp(1.25rem, 1.0156rem + 0.7813vw, 1.5rem);
   font-weight: normal;
-  margin-bottom: 9px;
 }
 
 .review {
@@ -289,25 +280,25 @@ a:hover {
   }
 
   &__text {
+    position: relative;
     flex: 1;
+    padding: 12px 16px;
+    margin: 0;
     font-size: 0.875rem;
     line-height: 1.3;
     font-style: italic;
-    padding: 12px 16px;
-    margin: 0;
     border-radius: 3px;
-    position: relative;
 
     &::before {
       content: '';
       position: absolute;
       left: 50%;
       top: -8px;
-      margin-left: -10px;
       width: 20px;
       height: 20px;
-      transform: rotate(45deg);
+      margin-left: -10px;
       background-color: rgb(var(--bs-secondary-bg-rgb));
+      transform: rotate(45deg);
 
       @media (min-width: 576px) {
         left: -8px;
@@ -343,26 +334,26 @@ a:hover {
 }
 
 .price-box {
+  max-width: 304px;
   padding: 10px 2px 21px;
   margin: 7px auto 0;
-  max-width: 304px;
 
   .box-title {
     margin-bottom: 14px;
   }
 
   &__price {
-    background-color: #fff;
-    color: var(--bs-secondary-color);
+    position: relative;
+    width: 100%;
+    padding: 0 7px 3px;
+    margin-bottom: 7px;
+    border: none;
     font-size: 40px;
     line-height: 64px;
-    padding: 0 7px 3px;
     font-style: normal;
     text-align: center;
-    border: none;
-    width: 100%;
-    margin-bottom: 7px;
-    position: relative;
+    color: var(--bs-secondary-color);
+    background-color: #fff;
 
     &::after {
       --border: 2px solid rgb(var(--bs-secondary-rgb));
@@ -437,8 +428,8 @@ a:hover {
   list-style: none;
 
   &__item {
-    padding: 0 0 19px 28px;
     position: relative;
+    padding: 0 0 19px 28px;
   }
 
   &__link {
@@ -455,11 +446,11 @@ a:hover {
   &__phone {
     &::before {
       content: '';
-      width: 26px;
-      height: 26px;
       position: absolute;
       top: -1px;
       left: 0;
+      width: 26px;
+      height: 26px;
       background-size: 100%;
     }
   }
@@ -499,18 +490,18 @@ a:hover {
 }
 
 .socials {
+  display: flex;
+  gap: 6px;
   padding: 4px 0 0;
   margin: 0;
   list-style: none;
-  display: flex;
-  gap: 6px;
 
   &__link {
     display: block;
     width: 43px;
     height: 42px;
-    text-indent: -9999px;
     overflow: hidden;
+    text-indent: -9999px;
     border-radius: 50%;
     transition: opacity 0.3s;
     background-size: 100%;
