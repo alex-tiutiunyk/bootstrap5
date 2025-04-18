@@ -3,7 +3,7 @@
 
 // Include any default variable overrides here (though functions won't be available)
 
-@import '../node_modules/bootstrap/scss/bootstrap';
+// @import '../node_modules/bootstrap/scss/bootstrap';
 
 // Then add additional custom code here
 
@@ -123,6 +123,23 @@ a:hover {
   }
 }
 
+[dir='rtl'] .product {
+  &__list-item {
+    padding-left: 0;
+    padding-right: 26px;
+
+    @media (min-width: 576px) {
+      padding-right: 36px;
+      padding-left: 0;
+    }
+
+    &::before {
+      left: auto;
+      right: 0;
+    }
+  }
+}
+
 .block {
   padding-top: 25px;
   padding-bottom: 25px;
@@ -217,6 +234,23 @@ a:hover {
   }
 }
 
+[dir='rtl'] .dignity-list {
+  &__item {
+    padding-left: 0;
+    padding-right: 35px;
+
+    @media (min-width: 576px) {
+      padding-left: 0;
+      padding-right: 42px;
+    }
+
+    &::before {
+      left: auto;
+      right: 0;
+    }
+  }
+}
+
 .scrinshots {
   padding-bottom: 1px;
 
@@ -291,6 +325,17 @@ a:hover {
   }
 }
 
+[dir='rtl'] .review {
+  &__text {
+    &::before {
+      @media (min-width: 576px) {
+        left: auto;
+        right: -8px;
+      }
+    }
+  }
+}
+
 .prices {
   .container-xxl {
     max-width: 1034px;
@@ -310,8 +355,8 @@ a:hover {
     background-color: #fff;
     color: var(--bs-secondary-color);
     font-size: 40px;
-    line-height: 60px;
-    padding: 0 7px 7px;
+    line-height: 64px;
+    padding: 0 7px 3px;
     font-style: normal;
     text-align: center;
     border: none;
@@ -354,6 +399,15 @@ a:hover {
     display: block;
     margin-top: 15px;
     font-size: 1.125rem;
+  }
+}
+
+[dir='rtl'] .price-box {
+  &__price {
+    &::after {
+      right: auto;
+      left: 14px;
+    }
   }
 }
 
@@ -424,6 +478,23 @@ a:hover {
 
   &__phone::before {
     background-image: url('../images/icons/ico-phone.png');
+  }
+}
+
+[dir='rtl'] .contacts-list {
+  &__item {
+    padding-left: 0;
+    padding-right: 28px;
+  }
+
+  &__skype,
+  &__icq,
+  &__email,
+  &__phone {
+    &::before {
+      left: auto;
+      right: 0;
+    }
   }
 }
 
